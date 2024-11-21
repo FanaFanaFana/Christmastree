@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advent Calendar</title>
+  </head>
+  <body>
+    <audio id="mySong" src="wonderful_christmas.mp3" loop></audio>
+
+    <script>
+      // Wait for a user interaction (like a click) to play the audio
+      document.addEventListener("click", () => {
+        const audio = document.getElementById("mySong");
+        audio.volume = 0.05; // Set volume between 0 (mute) and 1 (maximum)
+        audio.play();
+      });
+    </script>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
